@@ -2,23 +2,23 @@
 ################################################################################################
 Check user home directories and files therein
 
-toflynn: /home/toflynn
-Group wirte permissions correctly set on the home directory /home/toflynn
-Other read permissions correctly set on the home directory /home/toflynn
-Other write permissions correctly set on the home directory /home/toflynn
-Other execute permission correctly set on the home directory /home/toflynn
-The home directory (/home/toflynn) of user toflynn is own by toflynn
-Group write permisisons correctly set on file /home/toflynn/.bash_history
-Other write permissions correctly set on file /home/toflynn/.bash_history
-Group write permisisons correctly set on file /home/toflynn/.bash_logout
-Other write permissions correctly set on file /home/toflynn/.bash_logout
-Group write permisisons correctly set on file /home/toflynn/.bash_profile
-Other write permissions correctly set on file /home/toflynn/.bash_profile
-Group write permisisons correctly set on file /home/toflynn/.bashrc
-Other write permissions correctly set on file /home/toflynn/.bashrc
-No .forward file found in directory /home/toflynn
-No .netrc file found in directory /home/toflynn
-No .rhosts file found in directory /home/toflynn
+<username>: /home/<username>
+Group wirte permissions correctly set on the home directory /home/
+Other read permissions correctly set on the home directory /home/
+Other write permissions correctly set on the home directory /home/
+Other execute permission correctly set on the home directory /home/
+The home directory (/home/) of user is own by
+Group write permisisons correctly set on file /home//.bash_history
+Other write permissions correctly set on file /home//.bash_history
+Group write permisisons correctly set on file /home//.bash_logout
+Other write permissions correctly set on file /home//.bash_logout
+Group write permisisons correctly set on file /home//.bash_profile
+Other write permissions correctly set on file /home//.bash_profile
+Group write permisisons correctly set on file /home//.bashrc
+Other write permissions correctly set on file /home//.bashrc
+No .forward file found in directory /home/
+No .netrc file found in directory /home/
+No .rhosts file found in directory /home/
 
 ################################################################################################
 WARNING!
@@ -316,14 +316,14 @@ No world writable files found in /run/user/1001
 
 Check for unowned files
 WARNING! The following unowned file(s) found in /!
-/root/cntlm-0.92.3-1.x86_64.rpm
+/root/filename
 No unowned files found in /dev
 No unowned files found in /dev/shm
 No unowned files found in /run
 No unowned files found in /sys/fs/cgroup
 No unowned files found in /tmp
 WARNING! The following unowned file(s) found in /var!
-/var/spool/mail/tom
+/var/spool/mail/username
 No unowned files found in /var/tmp
 No unowned files found in /var/log
 No unowned files found in /var/log/audit
@@ -333,7 +333,7 @@ No unowned files found in /run/user/1001
 
 Check for ungrouped files
 WARNING! The following ungrouped file(s) found in /!
-/root/cntlm-0.92.3-1.x86_64.rpm
+/root/filename
 No ungrouped files found in /dev
 No ungrouped files found in /dev/shm
 No ungrouped files found in /run
