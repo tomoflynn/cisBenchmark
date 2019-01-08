@@ -1,0 +1,4 @@
+net.ipv6.conf.all.accept_redirects
+net.ipv6.conf.default.accept_redirects
+net.ipv6.conf.all.accept_ra
+net.ipv6.conf.default.accept_ra

@@ -1,0 +1,459 @@
+
+################################################################################################
+Check user home directories and files therein
+
+toflynn: /home/toflynn
+Group wirte permissions correctly set on the home directory /home/toflynn
+Other read permissions correctly set on the home directory /home/toflynn
+Other write permissions correctly set on the home directory /home/toflynn
+Other execute permission correctly set on the home directory /home/toflynn
+The home directory (/home/toflynn) of user toflynn is own by toflynn
+Group write permisisons correctly set on file /home/toflynn/.bash_history
+Other write permissions correctly set on file /home/toflynn/.bash_history
+Group write permisisons correctly set on file /home/toflynn/.bash_logout
+Other write permissions correctly set on file /home/toflynn/.bash_logout
+Group write permisisons correctly set on file /home/toflynn/.bash_profile
+Other write permissions correctly set on file /home/toflynn/.bash_profile
+Group write permisisons correctly set on file /home/toflynn/.bashrc
+Other write permissions correctly set on file /home/toflynn/.bashrc
+No .forward file found in directory /home/toflynn
+No .netrc file found in directory /home/toflynn
+No .rhosts file found in directory /home/toflynn
+
+################################################################################################
+WARNING!
+The original /etc/sysctl.conf file and any files in /etc/sysctl.d/ have been moved to ./backupFiles
+Please review these files and, if necessary, add lines from the originals to the new versions
+
+tcp_wrappers is already installed on this system
+rsyslog is already installed on this system
+xorg-x11* was not found on this system
+ypbind was not found on this system
+rsh was not found on this system
+talk was not found on this system
+telnet was not found on this system
+openldap-clients was not found on this system
+mcstrans was not found on this system
+setroubleshoot was not found on this system
+prelink was not found on this system
+################################################################################################
+WARNING!
+CIS.conf already exists in /etc/modprobe.d/!
+This file has been backed up
+Please review this backup and, if necessary, add lines from the orignal to the new version
+################################################################################################
+DISABLING OF UNNECESSARY FILESYSTEMS AND NETWORK PROTOCOLS
+The following filesystems and network protocols have been disabled:
+################################################################################################
+FILESYSTEM MOUNT OPTONS:
+
+nodev, nosuid and noexec options have been set for /tmp /var/tmp and /dev/shm
+Mount options for removable media have not been checked for this server.
+If you have removable media see page 50 of CIS Benchmark Guide for instructions on setting mount options
+################################################################################################
+SETTING OF STICKY BIT ON WORLD WRITABLE FILES
+
+Sticky bit set on all world writable directories
+################################################################################################
+CHECKING OF AUTOMOUNTING OPTIONS
+
+################################################################################################
+GPG KEY DETAILS:
+
+gpg-pubkey-f4a80eb5-53a7ff4b --> gpg(CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>)
+gpg-pubkey-352c64e5-52ae6884 --> gpg(Fedora EPEL (7) <epel@fedoraproject.org>)
+################################################################################################
+CHECKING OF GPG KEY CONFIGURATION
+
+gpgcheck enabled in yum.conf
+gpgcheck enabled for CentOS-Base.repo
+gpgcheck enabled for CentOS-CR.repo
+gpgcheck enabled for CentOS-Debuginfo.repo
+gpgcheck enabled for CentOS-fasttrack.repo
+gpgcheck enabled for CentOS-Media.repo
+gpgcheck enabled for CentOS-Sources.repo
+gpgcheck enabled for CentOS-Vault.repo
+gpgcheck enabled for epel.repo
+gpgcheck enabled for epel-testing.repo
+
+################################################################################################
+SECURE GRUB FILES
+This script assumes the grub bootloader is in use.
+If using a different bootloader please check relevant documentation for equivalent commands.
+
+The file /boot/grub2/grub.cfg has been secured
+The file /boot/grub2/user.cfg exists and has been secured
+
+################################################################################################
+ENSURE SINGLE USER MODE IS PROTECTED
+
+Single user and emergency mode are now password protected
+
+################################################################################################
+RESTRICTION OF CORE DUMPS
+
+Core dumps restricted
+
+################################################################################################
+MEMORY PROTECTION (XD/NX)
+
+NX protection enabled
+
+################################################################################################
+ADDRESS SPACE LAYOUT RANDOMIZATOIN 
+
+Address space layout randomization is already enabled on this system
+
+MANDATORY ACCESS CONTROL (SELINUX)
+
+
+################################################################################################
+ENSURE SELINUX IS NOT DISABLED IN BOOTLOADER CONFIGUREATION
+
+SeLinux was not disabled in the bootloader configuration
+
+SELinux is enforced by default
+
+SELinux type is set to targeted or mls
+
+################################################################################################
+DETECT UNCONFINED DAEMONS
+
+No unconfined daemons
+
+################################################################################################
+CHECK MOTD AND OTHER FILES WHICH MAY PROVIDE SYSTEM INFORMATION
+
+The files /etc/ssh/sshd_config, /etc/motd and /etc/issue.net have been replaced
+Please review the new files and ensure the settings are in accordance with site policy
+Ownership of /etc/motd set to root:root and permissions set to 644
+
+The following file does not appear to provide information useful to intruders
+However, it may still be beneficial to review the file
+/etc/motd
+Ownership of /etc/issue set to root:root and permissions set to 644
+
+WARNING!!
+The following file may provide information useful to intruders
+Consider modifying this file in accordance with company policy
+/etc/issue
+Ownership of /etc/issue.net set to root:root and permissions set to 644
+
+The following file does not appear to provide information useful to intruders
+However, it may still be beneficial to review the file
+/etc/issue.net
+Ownership of /etc/pam.d/password-auth-ac set to root:root and permissions set to 644
+
+The following file does not appear to provide information useful to intruders
+However, it may still be beneficial to review the file
+/etc/pam.d/password-auth-ac
+
+################################################################################################
+DISABLE INETD SERVICES
+
+chargen-dgram disabled
+chargen-stream disabled
+daytime-dgram disabled
+daytime-stream disabled
+discard-dgram disabled
+discard-stream disabled
+echo-dgram disabled
+echo-stream disabled
+time-dgram disabled
+time-stream disabled
+tftp disabled
+
+################################################################################################
+CHECK FOR UNNECESSARY SERVICES AND DISABLE THEM
+
+autofs is not enabled on this system
+avahi-daemon is not enabled on this system
+cups is not enabled on this system
+dhcpd is not enabled on this system
+slapd is not enabled on this system
+nfs is not enabled on this system
+nfs-server is not enabled on this system
+rpcbind is not enabled on this system
+named is not enabled on this system
+vsftpd is not enabled on this system
+httpd is not enabled on this system
+dovecot is not enabled on this system
+smb is not enabled on this system
+squid is not enabled on this system
+snmpd is not enabled on this system
+ypserv is not enabled on this system
+rsh.socket is not enabled on this system
+rlogin.socket is not enabled on this system
+rexec.socket is not enabled on this system
+telnet.socket is not enabled on this system
+tftp.socket is not enabled on this system
+rsyncd is not enabled on this system
+ntalk is not enabled on this system
+ is not enabled on this system
+
+################################################################################################
+CHECK FOR NECESSARY SERVICES AND ENABLE THEM
+
+auditd has been enabled
+rsyslog has been enabled
+crond has been enabled
+
+################################################################################################
+REMOVE UNWANTED PACKAGES
+
+
+################################################################################################
+ENSURE MAIL TRANSFER AGENT IS CONFIGURED FOR LOCAL-ONLY MODE
+
+MTA has been modified to run in local-only mode
+
+################################################################################################
+NETWORK CONFIGURATION
+
+See the files ./network/ip4Enable and ./network/ip4Disable for details of network parameter settings
+
+
+################################################################################################
+Configure TCP Wrappers
+
+
+################################################################################################
+Configure Basic Firewall Rules
+
+Firewall rules have been configured in accordance with recommendations given in the CIS manual
+Please note these are basic rules and they may need further modifcation based on your organisation's policy
+
+
+################################################################################################
+Auditing of processes which start prior to auditd
+Auditing for all processes enabled
+
+################################################################################################
+Add auditing rules from .newFiles/cis.rules
+The file /etc/audit/rules.d/cis.rules already exists
+This file has been backed up to ./backupFiles
+
+################################################################################################
+Configure Logging
+
+Loggging configured in accordance with recommendations in CIS manual
+New rules have been appended to /etc/rsyslog.conf
+Please review these configurations by inspecting this file
+
+WARNING! This script does not modify log rotation policies
+Please review the /etc/logrotate.conf and /etc/logrotate.d/* and ensure log files are rotated in accordance with site policy
+
+################################################################################################
+Configure permissions on important files
+Access to /etc/crontab restricted to root
+Access to /etc/cron.hourly restricted to root
+Access to /etc/cron.daily restricted to root
+Access to /etc/cron.weekly restricted to root
+Access to /etc/cron.monthly restricted to root
+Access to /etc/cron.d restricted to root
+Access to /etc/ssh/sshd_config restricted to root
+
+Ownership of all Cron files set to root
+Permissions on all Cron files restricted to root
+Access to at/Cron restricted to root
+
+################################################################################################
+SSH Configuration
+This script sets a basic Banner warning via /etc/issue.net
+Please consider setting a more detailed warning in accordance with site policies
+
+################################################################################################
+Set default inactive account lock
+
+Default inactive account lock has been set to 30 days
+
+Authconfig has been run to update authentication settings
+
+
+################################################################################################
+Set system accounts to non-login
+
+Environment set to /sbin/nologin for system accounts
+
+################################################################################################
+Set GID for root to 0
+
+GID set to 0 for root accout
+
+The following defaults have been set
+umask:	027
+Inactivity timeout:	30 minutes
+Root login restricted to console and tty1 - tty10
+
+################################################################################################
+Restrict access to the su command
+
+Root and at least one other user already added to the wheel group
+Requirement for wheel membership to access su command is already in force
+
+################################################################################################
+Set permissons on group and password files
+
+Correct permissions set on all passwd, shadow and group files (including backup files)
+
+################################################################################################
+Restrict access to the su command
+
+Check for world writable files
+No world writable files found in /
+No world writable files found in /dev
+No world writable files found in /dev/shm
+No world writable files found in /run
+No world writable files found in /sys/fs/cgroup
+No world writable files found in /tmp
+No world writable files found in /var
+No world writable files found in /var/tmp
+No world writable files found in /var/log
+No world writable files found in /var/log/audit
+No world writable files found in /boot
+No world writable files found in /home
+No world writable files found in /run/user/1001
+
+Check for unowned files
+WARNING! The following unowned file(s) found in /!
+/root/cntlm-0.92.3-1.x86_64.rpm
+No unowned files found in /dev
+No unowned files found in /dev/shm
+No unowned files found in /run
+No unowned files found in /sys/fs/cgroup
+No unowned files found in /tmp
+WARNING! The following unowned file(s) found in /var!
+/var/spool/mail/tom
+No unowned files found in /var/tmp
+No unowned files found in /var/log
+No unowned files found in /var/log/audit
+No unowned files found in /boot
+No unowned files found in /home
+No unowned files found in /run/user/1001
+
+Check for ungrouped files
+WARNING! The following ungrouped file(s) found in /!
+/root/cntlm-0.92.3-1.x86_64.rpm
+No ungrouped files found in /dev
+No ungrouped files found in /dev/shm
+No ungrouped files found in /run
+No ungrouped files found in /sys/fs/cgroup
+No ungrouped files found in /tmp
+No ungrouped files found in /var
+No ungrouped files found in /var/tmp
+No ungrouped files found in /var/log
+No ungrouped files found in /var/log/audit
+No ungrouped files found in /boot
+No ungrouped files found in /home
+No ungrouped files found in /run/user/1001
+
+Check for suid executables
+WARNING! The following suid executable(s) found in /!
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/fusermount
+/usr/bin/chage
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/su
+/usr/bin/umount
+/usr/bin/pkexec
+/usr/bin/crontab
+/usr/bin/passwd
+/usr/sbin/pam_timestamp_check
+/usr/sbin/unix_chkpwd
+/usr/sbin/usernetctl
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/libexec/dbus-1/dbus-daemon-launch-helper
+No suid executables found in /dev
+No suid executables found in /dev/shm
+No suid executables found in /run
+No suid executables found in /sys/fs/cgroup
+No suid executables found in /tmp
+No suid executables found in /var
+No suid executables found in /var/tmp
+No suid executables found in /var/log
+No suid executables found in /var/log/audit
+No suid executables found in /boot
+No suid executables found in /home
+No suid executables found in /run/user/1001
+
+Check for guid executables
+WARNING! The following world sgid executable(s) found in /!
+/usr/bin/wall
+/usr/bin/write
+/usr/bin/ssh-agent
+/usr/sbin/netreport
+/usr/sbin/postdrop
+/usr/sbin/postqueue
+/usr/libexec/utempter/utempter
+/usr/libexec/openssh/ssh-keysign
+No sgid executables found in /dev
+No sgid executables found in /dev/shm
+No sgid executables found in /run
+No sgid executables found in /sys/fs/cgroup
+No sgid executables found in /tmp
+No sgid executables found in /var
+No sgid executables found in /var/tmp
+No sgid executables found in /var/log
+No sgid executables found in /var/log/audit
+No sgid executables found in /boot
+No sgid executables found in /home
+No sgid executables found in /run/user/1001
+
+################################################################################################
+Check for empty passwords
+
+No empty passwords found
+
+################################################################################################
+Check for legacy + entries
+
+No legacy + entries found in /etc/passwd
+No legacy + entries found in /etc/shadow
+No legacy + entries found in /etc/group
+
+################################################################################################
+Check for non root accounts with UID 0
+
+Only root has UID 0
+
+################################################################################################
+Check root PATH variable
+
+Please ensure there are no relative paths or world writable directories in the root PATH variable (printed below)
+/usr/local/sbin
+/usr/local/bin
+/sbin
+/bin
+/usr/sbin
+/usr/bin
+/root/bin
+
+################################################################################################
+Check that all groups in /etc/passwd exist in /etc/group
+All groups in /etc/passwd exist in /etc/group
+
+################################################################################################
+Check for duplicate usernames, groupnames, UIDs and GIDs
+
+No duplicate UID values found
+
+No duplicate GID values found
+
+No duplicate usernames found
+
+No duplicate groupnames found
+
+
+################################################################################################
+FURTHER WORK TO BE CARRIED OUT
+This script does not configure time synchronisation on the system
+This script does not check for active wireless interfaces
+Please consider manually checking that all user accounts password change dates are in the past
+If this server contains active wireless interfaces please consider disabling them
+Please consider installing/configuring ntp and chrony see section 2.2.1 of CIS manual
+Please consider installing an intrusion detection system such as AIDE
+

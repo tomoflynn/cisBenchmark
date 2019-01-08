@@ -1,0 +1,7 @@
+net.ipv4.conf.default.log_martians
+net.ipv4.conf.all.log_martians
+net.ipv4.icmp_echo_ignore_broadcasts
+net.ipv4.conf.all.rp_filter
+net.ipv4.conf.default.rp_filter
+net.ipv4.icmp_ignore_bogus_error_responses
+net.ipv4.tcp_syncookies

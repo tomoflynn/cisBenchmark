@@ -1,0 +1,13 @@
+/
+/dev
+/dev/shm
+/run
+/sys/fs/cgroup
+/tmp
+/var
+/var/tmp
+/var/log
+/var/log/audit
+/boot
+/home
+/run/user/1001

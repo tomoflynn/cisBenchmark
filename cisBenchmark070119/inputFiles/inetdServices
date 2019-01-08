@@ -1,0 +1,11 @@
+chargen-dgram
+chargen-stream
+daytime-dgram
+daytime-stream
+discard-dgram 
+discard-stream
+echo-dgram
+echo-stream
+time-dgram
+time-stream
+tftp

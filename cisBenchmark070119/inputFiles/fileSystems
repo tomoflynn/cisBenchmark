@@ -1,0 +1,12 @@
+cramfs
+freevxfs
+jffs2
+hfs
+hfsplus
+squashfs
+udf
+vfat
+dccp
+sctp
+rds
+ticp

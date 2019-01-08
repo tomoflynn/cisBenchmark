@@ -1,0 +1,7 @@
+/etc/crontab
+/etc/cron.hourly
+/etc/cron.daily
+/etc/cron.weekly
+/etc/cron.monthly
+/etc/cron.d
+/etc/ssh/sshd_config

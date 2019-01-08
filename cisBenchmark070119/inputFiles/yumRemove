@@ -1,0 +1,9 @@
+xorg-x11*
+ypbind
+rsh
+talk
+telnet
+openldap-clients
+mcstrans
+setroubleshoot
+prelink
