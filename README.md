@@ -3,7 +3,7 @@ Script to implement recommendations of CIS CentOS Linux 7 Benchmark Guide by Tom
 
 This script automates the recommendations of the CIS CentOS Linux 7 Benchmark PDF (see https://www.cisecurity.org/benchmark/centos_linux/). It is designed to be run on a fresh minimal install.
 
-While the script will probably work on most of the latest RedHat variants (and possible other Linux releases) it has only been tested on a minimum install of CentOS 7 (CentOS release 7.6.1810 (Core)) with the following separate partitions:
+While this script should work on most of the latest RedHat variants (and possibly other Linux releases with basic modifications) it has only been tested on a minimum install of CentOS 7 (CentOS release 7.6.1810 (Core)) with the following separate partitions:
 
 /tmp
 
@@ -18,6 +18,20 @@ While the script will probably work on most of the latest RedHat variants (and p
 /home
 
 The author makes no claims to originality as all the settings are directly taken from the above mentioned guide. Furthermore, much of the bash code has been written after consultation with online sources (particularly https://stackoverflow.com). Finally, similar scripts are no doubt available elsewhere so anyone interested in this work is encouraged to investigate other options. The author created this script partly because it is a good learning experience but more so because he felt more comfortable working with code of his own creation. In the event of there being a programming error it can be easier to troubleshoot code you have written yourself than somebody else's work.
+
+In order to run this script download all files and folders to a suitable location and run cis.sh as root. Most of the changes to the host system require no user input. However, the user is prompted for input in the cases listed below:
+
+The script checks for a secure user.cfg file in /boot or subdirectories therein. If it is not found the user is asked if grub should be password protected?
+
+Should ip version 6 be disabled? 
+
+Should tcp wrappers be configured?
+
+If the above questioned is answered in the affirmative should tcp wrappers only protect ssh or all services provided via TCP?
+
+Should ssh access be restricted to specific accounts? If answered yes the user is prompted for at least one username to which ssh access should be granted
+
+Access to su is restricted using wheel. The script then checks to see if at least one normal user has been added to the wheel group. If not it prompts for a username to add
 
 At present there are a number of folders containing files which are consulted by the code. These will be tidied up in future but at present they consist of the following folders:
 
