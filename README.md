@@ -1,19 +1,30 @@
 #cisBenchmark
 Script to implement recommendations of CIS CentOS Linux 7 Benchmark Guide by Tom O'Flynn:
-This script automates the recommendations of the CIS CentOS Linux 7 Benchmark PDF (see https://www.cisecurity.org/benchmark/centos_linux/). It is desinged to be run on a fresh minimal install.
-While the script will probably work on most of the latest RedHat variants (and possible other Linux releases) it has only ben tested on a minimum install of CentOS 7 (CentOS release 7.6.1810 (Core) to be exact) with the following separate partitions:
-/tmp,
-/var/,
-/var/tmp,
-/var/log,
-/var/log/audit,
-/home.
+
+This script automates the recommendations of the CIS CentOS Linux 7 Benchmark PDF (see https://www.cisecurity.org/benchmark/centos_linux/). It is designed to be run on a fresh minimal install.
+
+While the script will probably work on most of the latest RedHat variants (and possible other Linux releases) it has only been tested on a minimum install of CentOS 7 (CentOS release 7.6.1810 (Core)) with the following separate partitions:
+
+/tmp
+
+/var
+
+/var/tmp
+
+/var/log
+
+/var/log/audit
+
+/home
+
 The author makes no claims to originality as all the settings are directly taken from the above mentioned guide. Furthermore, much of the bash code has been written after consultation with online sources (particularly https://stackoverflow.com). Finally, similar scripts are no doubt available elsewhere so anyone interested in this work is encouraged to investigate other options. The author created this script partly because it is a good learning experience but more so because he felt more comfortable working with code of his own creation. In the event of there being a programming error it can be easier to troubleshoot code you have written yourself than somebody else's work.
+
 At present there are a number of folders containing files which are consulted by the code. These will be tidied up in future but at present they consist of the following folders:
+
 1. backupFiles - before any system files are modified they are backed up to this folder. Files are labelled originalName.<date/time> where <date/time> takes the form of dd-mm-yy:hour:minute:second and represents the time at which the script was run. 
-2. inputFiles - this folder contains files which are read by the code when running commands. For example the yumInstall/yumRemove files list packages to be installed or removed by the yum command. These files can be modified in advance of running the code.
-3. network - this folder contains files which list modules from ip (versions 4 and 6) which are enabled/disabled by the code. These files can be modified in advance of running the code.
-4. newFiles - when this script was originally written system files which needed to be modified were directly altered by the code. At a later stage the author felt it might be better to simply prepare some files in advance and overwrite the originals. As mentioned in point 1 above all original files can be found in the backupFiles folder with a date and time stamp appended to their names. 
+2. inputFiles - this folder contains files which are read by the code when running commands. For example the yumInstall/yumRemove files list packages to be installed or removed by the yum command. These files can be modified in advance of running the code. The one exception to this is the file named localPartitions which is created by the code and subsequently used for input. As this file is created as the code runs it obviously cannot be prepared in advance.
+3. network - this folder contains files which list ip settings (versions 4 and 6) which are enabled/disabled by the code. These files can be modified in advance of running the code.
+4. newFiles - when this script was originally written system files were directly altered by the code. At a later stage the author felt it would be better to prepare some files in advance and overwrite the originals. This folder contains those files. As mentioned in point 1 above all original files can be found in the backupFiles folder with a date and time stamp appended to their names. 
 5. outputFiles - as the code runs information about modifications made are saved to a file in this folder. The filename is info.<date/time> where <date/time> takes the same format as given in point 1 above. It is envisaged that other outputFiles will be produced by future versions of the code (see "Future Work" below).
 
 Future Work:
