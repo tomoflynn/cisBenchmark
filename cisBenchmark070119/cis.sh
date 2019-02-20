@@ -16,6 +16,30 @@
 outputFile=./outputFiles/info.`date +%d-%m-%y:%H:%M:%S`
 touch $outputFile
 
+#Create a directory to store original copy of any files modified if it does not already exist
+mkdir -p backupFiles
+
+#This script may modify /etc/sysctl.conf or any files in /etc/sysctl.d. 
+#Simplest thing is to simply back up all these files in advance of running the script
+
+mv /etc/sysctl.conf ./backupFiles/sysctl.conf.`date +%d-%m-%y:%H:%M:%S`
+touch /etc/sysctl.conf
+chmod 644 /etc/sysctl.conf
+
+for file in $(ls /etc/sysctl.d/ | grep -v 99-sysctl.conf)
+	do
+		mv /etc/sysctl.d/$file ./backupFiles/$file.`date +%d-%m-%y:%H:%M:%S`
+		touch /etc/sysctl.d/$file
+		chmod 644 /etc/sysctl.d/$file
+	done
+
+echo "################################################################################################" >> ./$outputFile
+echo WARNING! >> ./$outputFile
+echo "The original /etc/sysctl.conf file and any files in /etc/sysctl.d/ have been moved to ./backupFiles" >> ./$outputFile
+echo "Please review these files and, if necessary, add lines from the originals to the new versions" >> ./$outputFile
+echo "" >> ./$outputFile
+
+
 echo "" >> $outputFile
 echo "################################################################################################" >> ./$outputFile
 echo "Check user home directories and files therein" >> ./$outputFile
@@ -164,30 +188,8 @@ cat /etc/passwd | egrep -v '^(root|halt|sync|shutdown)' | awk -F: '($7 != "/sbin
 			
 	done
 
-#Create a directory to store original copy of any files modified
 
 
-mkdir -p backupFiles
-
-#This script may modify /etc/sysctl.conf or any files in /etc/sysctl.d. 
-#Simplest thing is to simply back up all these files in advance of running the script
-
-mv /etc/sysctl.conf ./backupFiles/sysctl.conf.`date +%d-%m-%y:%H:%M:%S`
-touch /etc/sysctl.conf
-chmod 644 /etc/sysctl.conf
-
-for file in $(ls /etc/sysctl.d/ | grep -v 99-sysctl.conf)
-	do
-		mv /etc/sysctl.d/$file ./backupFiles/$file.`date +%d-%m-%y:%H:%M:%S`
-		touch /etc/sysctl.d/$file
-		chmod 644 /etc/sysctl.d/$file
-	done
-
-echo "################################################################################################" >> ./$outputFile
-echo WARNING! >> ./$outputFile
-echo "The original /etc/sysctl.conf file and any files in /etc/sysctl.d/ have been moved to ./backupFiles" >> ./$outputFile
-echo "Please review these files and, if necessary, add lines from the originals to the new versions" >> ./$outputFile
-echo "" >> ./$outputFile
 
 
 #Install packages listed in yumInstall
@@ -1341,7 +1343,6 @@ echo "" >> $outputFile
 #To do
 #Configure automatic updates
 #Create a single text file for any files that need to be backed up and back them up in a single go
-#Alter the backup strategy to ensure original files are not overwritten due to repeated iterations of the script
 #Configure a single file to iterate through settings recommended in chapter 3 that have similar command line structure
 #Do I need to check for install of selinux?? (page 87)
 #Put all files which need permissions and ownership changes into a single text file and iterate through them
