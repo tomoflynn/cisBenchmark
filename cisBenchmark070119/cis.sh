@@ -270,8 +270,8 @@ sed -i '/\s\/tmp\s/ s/defaults\s/defaults,nosuid,nodev,noexec\t/' /etc/fstab
 sed -i '/\s\/var\/tmp\s/ s/defaults\s/defaults,nosuid,nodev,noexec\t/' /etc/fstab
 
 #Ensure settings for /dev/shm are correct (simpler just to delete relevant line and replace it!)
-sed -i '/\/dev\/shm/d' /etc/fstab.backup2
-echo "tempfs	/dev/shm	tempsf	defaults,nosuid,nodev,noexec        0 0" >> /etc/fstab.backup2
+sed -i '/\/dev\/shm/d' /etc/fstab
+echo "tempfs	/dev/shm	tempsf	defaults,nosuid,nodev,noexec        0 0" >> /etc/fstab
 	
 
 
